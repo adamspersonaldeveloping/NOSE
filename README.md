@@ -14,7 +14,7 @@ Need a color chosen? Can't choose? Use this random color picker!
   <li><a href="https://github.com/IsaacHHB">Isaac H</a></li>
   <li>Scott W</li>
   <li><a href="https://github.com/lfrendahl">Lisa F</a></li>
-  <li><a href="https://github.com/adamspersonaldeveloping">Stein B</a></li>
+  <li><a href="https://github.com/adamspersonaldeveloping">John Adams</a></li>
   <li><a href="https://github.com/FRUHD">Betty C</a></li>
 </ul>
 <span>05.26.2022</span>
