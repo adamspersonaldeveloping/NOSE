@@ -2,6 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const querystring = require('querystring');
+const figlet = require('figlet')
 
 const server = http.createServer((req, res) => {
 
@@ -23,10 +24,26 @@ const server = http.createServer((req, res) => {
       res.write(data);
       res.end();
     })
+  } else if (page == '/api'){
+    res.writeHead(200, {'Content-Type': 'application/json'});
+        let randomNumberOfOneTwoOrThree = Math.floor(Math.random() * 3)
+        const objToJson = {
+          randomNumber: randomNumberOfOneTwoOrThree
+        }
+        res.end(JSON.stringify(objToJson));
+
   } else if (page == '/js/main.js') {
     readWrite('js/main.js', 'text/javascript')
-  } else {
-    return;
+  }else {
+    figlet('404!!', function(err, data) {
+      if (err) {
+          console.log('Something went wrong...');
+          console.dir(err);
+          return;
+      }
+      res.write(data);
+      res.end();
+    });
   }
 
 
@@ -38,7 +55,9 @@ const server = http.createServer((req, res) => {
 // Button click with access DOM and change background color
 // Yay! Success?
 
+
+
+
+});
+
 server.listen(8000);
-
-
-})
